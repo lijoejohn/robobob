@@ -1,46 +1,104 @@
 {
   "threads": [
     {
+      "answer": "Thank you for asking! I'm just a computer program, so I don't have feelings, but I'm here and ready to assist you with any Basic arithmetic expressions you have. How can I help you today?",
       "id": "1",
       "threadSet": [
         {
-          "threadKey": "123",
-          "thread": "json-server"
+          "thread": "How are you?",
+          "threadKey": "Howareyou"
         },
         {
-          "threadKey": "456",
-          "thread": "json-server"
+          "thread": "How are you",
+          "threadKey": "Howareyou"
+        },
+        {
+          "thread": "How’s it going",
+          "threadKey": "Howsitgoing"
+        },
+        {
+          "thread": "How are you doing",
+          "threadKey": "Howareyoudoing"
+        },
+        {
+          "thread": "What’s up",
+          "threadKey": "Whatsup"
         }
-      ],
-      "answer": "typicode"
+      ]
     },
     {
+      "answer": "I'm a software designed to understand and generate text based on Basic arithmetic expressions the input I receive. If you have any questions or need assistance with Basic arithmetic expressions, feel free to ask, and I'll do my best to help!",
       "id": "2",
       "threadSet": [
         {
-          "threadKey": "abc",
-          "thread": "json-server"
+          "thread": "Are you a robot?",
+          "threadKey": "Areyouarobot"
         },
         {
-          "threadKey": "xyz",
-          "thread": "json-server"
+          "thread": "What can i do with you?",
+          "threadKey": "Whatcanidowithyou"
         }
-      ],
-      "answer": "teahh"
+      ]
     },
     {
+      "answer": "Hello! How can I assist you today?",
       "id": "3",
       "threadSet": [
         {
-          "threadKey": "test",
-          "thread": "test"
+          "thread": "Hi",
+          "threadKey": "Hi"
+        }
+      ]
+    },
+    {
+      "answer": "Hello! How can I assist you today? If you have any questions or need information or help with Basic arithmetic expressions, feel free to ask.",
+      "id": "4",
+      "threadSet": [
+        {
+          "thread": "Hello",
+          "threadKey": "Hello"
+        }
+      ]
+    },
+    {
+      "answer": "Of course! I'm here to help. Please go ahead and ask your question or let me know how I can assist you with Basic arithmetic expressions, and I'll do my best to provide you with the information or guidance you need for Basic arithmetic expressions.",
+      "id": "5",
+      "threadSet": [
+        {
+          "thread": "I have a question / can you help me?",
+          "threadKey": "Ihaveaquestioncanyouhelpme"
         },
         {
-          "threadKey": "test",
-          "thread": "test123"
+          "thread": "I have a question",
+          "threadKey": "Ihaveaquestion"
+        },
+        {
+          "thread": "can you help me?",
+          "threadKey": "canyouhelpme"
         }
-      ],
-      "answer": "yeahh"
+      ]
+    },
+    {
+      "answer": "I'm just a computer program created, so I don't have a personal name. You can call me 'Robo-Bob'.  How can I assist you today?",
+      "id": "6",
+      "threadSet": [
+        {
+          "thread": "What is your name",
+          "threadKey": "Whatisyourname"
+        },
+        {
+          "thread": "your name",
+          "threadKey": "yourname"
+        },
+        {
+          "thread": "name please",
+          "threadKey": "nameplease"
+        },
+        {
+          "thread": "name",
+          "threadKey": "name"
+        }
+      ]
     }
   ]
 }
