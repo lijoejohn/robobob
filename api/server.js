@@ -19,9 +19,9 @@ server.use(function(req, res, next) {
             threadSet
         }) => {
             const flag = threadSet.some(({
-                threadKey
+                thread
             }) => {
-                return threadKey === req.body.threadKey
+                return thread === req.body.thread
             })
             return flag;
         })
