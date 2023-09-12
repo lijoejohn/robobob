@@ -21,7 +21,7 @@ server.use(function(req, res, next) {
             const flag = threadSet.some(({
                 thread
             }) => {
-                return thread === req.body.thread
+                return thread.toLowerCase() === req.body.thread.toLowerCase()
             })
             return flag;
         })
