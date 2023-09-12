@@ -4,28 +4,15 @@
       "id": "1",
       "messageSet": [
         {
-          "messageKey": "",
+          "messageKey": "123",
           "message": "json-server"
         },
         {
-          "messageKey": "",
+          "messageKey": "456",
           "message": "json-server"
         }
       ],
       "answer": "typicode"
-    },
-    {
-      "messageSet": [
-        {
-          "messageKey": "abc",
-          "message": "json-server"
-        },
-        {
-          "messageKey": "xyz",
-          "message": "json-server"
-        }
-      ],
-      "answer": "teahh"
     },
     {
       "id": "2",
