@@ -13,15 +13,15 @@ server.use(bodyParser.json());
 server.use(function(req, res, next) {
     if (req.originalUrl === '/answer') {
         const {
-            messages
+            threads
         } = seed;
-        const result = messages.find(({
-            messageSet
+        const result = threads.find(({
+            threadSet
         }) => {
-            const flag = messageSet.some(({
-                messageKey
+            const flag = threadSet.some(({
+                threadKey
             }) => {
-                return messageKey === req.body.messageKey
+                return threadKey === req.body.threadKey
             })
             return flag;
         })

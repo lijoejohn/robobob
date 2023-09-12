@@ -1,43 +1,43 @@
 {
-  "messages": [
+  "threads": [
     {
       "id": "1",
-      "messageSet": [
+      "threadSet": [
         {
-          "messageKey": "123",
-          "message": "json-server"
+          "threadKey": "123",
+          "thread": "json-server"
         },
         {
-          "messageKey": "456",
-          "message": "json-server"
+          "threadKey": "456",
+          "thread": "json-server"
         }
       ],
       "answer": "typicode"
     },
     {
       "id": "2",
-      "messageSet": [
+      "threadSet": [
         {
-          "messageKey": "abc",
-          "message": "json-server"
+          "threadKey": "abc",
+          "thread": "json-server"
         },
         {
-          "messageKey": "xyz",
-          "message": "json-server"
+          "threadKey": "xyz",
+          "thread": "json-server"
         }
       ],
       "answer": "teahh"
     },
     {
       "id": "3",
-      "messageSet": [
+      "threadSet": [
         {
-          "messageKey": "test",
-          "message": "test"
+          "threadKey": "test",
+          "thread": "test"
         },
         {
-          "messageKey": "test",
-          "message": "test123"
+          "threadKey": "test",
+          "thread": "test123"
         }
       ],
       "answer": "yeahh"
