@@ -1,0 +1,21 @@
+{
+  "name": "robobob",
+  "workspaces": [
+    "app",
+    "api"
+  ],
+  "private": true,
+  "scripts": {
+    "test-automation": "yarn workspace app test-automation",
+    "install-dependencies": "yarn install",
+    "start:app": "yarn workspace app dev",
+    "start:api": "yarn workspace api start",
+    "start": "concurrently \"yarn run start:app\" \"yarn run start:api\" ",
+    "test": "yarn workspace app test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "eslint": "^8.49.0",
+    "prettier": "^3.0.3"
+  }
+}

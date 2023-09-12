@@ -1,0 +1,45 @@
+{
+  "messages": [
+    {
+      "id": "1",
+      "messageSet": [
+        {
+          "messageKey": "",
+          "message": "json-server"
+        },
+        {
+          "messageKey": "",
+          "message": "json-server"
+        }
+      ],
+      "answer": "typicode"
+    },
+    {
+      "messageSet": [
+        {
+          "messageKey": "abc",
+          "message": "json-server"
+        },
+        {
+          "messageKey": "xyz",
+          "message": "json-server"
+        }
+      ],
+      "answer": "teahh"
+    },
+    {
+      "id": "2",
+      "messageSet": [
+        {
+          "messageKey": "abc",
+          "message": "json-server"
+        },
+        {
+          "messageKey": "xyz",
+          "message": "json-server"
+        }
+      ],
+      "answer": "teahh"
+    }
+  ]
+}
