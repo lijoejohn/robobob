@@ -4,10 +4,10 @@ import { DomPurify } from "../helpers";
 
 export const MessageBlock = ({
   isQuestion,
-  message,
+  thread,
 }: {
   isQuestion?: boolean;
-  message: string;
+  thread: string;
 }) => {
   return (
     <div
@@ -28,7 +28,7 @@ export const MessageBlock = ({
     >
       <Avatar isQuestion={isQuestion} />
       <div className={clsx("flex", isQuestion && "justify-end", "w-full")}>
-        {DomPurify(message)}
+        {DomPurify(thread)}
       </div>
     </div>
   );

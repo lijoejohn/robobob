@@ -6,11 +6,11 @@ interface Cache<T> {
 }
 
 type FetchProps = {
-  callBack: (data: AnswerResponseType) => void;
-  messageKey: string;
+  callBack: (data: AnswerResponseType | undefined) => void;
+  thread: string;
 };
 
-export const UseFetch = ({ messageKey, callBack }: FetchProps) => {
+export const UseFetch = ({ thread, callBack }: FetchProps) => {
   const cache = useRef<Cache<AnswerResponseType>>({});
   const [data, setData] = useState<AnswerResponseType>();
   const [loading, setLoading] = useState(true);
@@ -25,13 +25,13 @@ export const UseFetch = ({ messageKey, callBack }: FetchProps) => {
     [setError]
   );
 
-  const requestPayload = { messageKey: messageKey };
+  const requestPayload = { thread };
   const requestOptions = {
     method: "POST",
     headers: new Headers({ "content-type": "application/json" }),
     body: JSON.stringify(requestPayload),
   };
-  const url = "http://localhost:8000/answer";
+  const url = "https://frozen-sea-84259-a7779bc76c91.herokuapp.com/answer";
 
   async function FetchURL() {
     if (cache.current[url]) {
@@ -54,10 +54,10 @@ export const UseFetch = ({ messageKey, callBack }: FetchProps) => {
   }
   useEffect(() => {
     FetchURL().catch((e) => throwError(e));
-  }, [messageKey]);
+  }, [thread]);
 
   useEffect(() => {
-    if (!loading && data) {
+    if (!loading) {
       callBack(data);
     }
   }, [loading, data]);

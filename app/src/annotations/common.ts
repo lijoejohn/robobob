@@ -7,9 +7,11 @@ export type Question = {
   questionKey: string;
 };
 export type Thread = {
-  message: string;
-  messageKey: string;
+  thread: string;
+  threadKey: string;
   threadType: ThreadType;
 };
 
-export type AnswerResponseType = Omit<Thread, "threadType">;
+export type AnswerResponseType = Omit<Thread, "threadType"> & {
+  answer: string;
+};

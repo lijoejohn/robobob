@@ -1,5 +1,10 @@
+import { forwardRef } from "react";
+
 import clsx from "clsx";
-export const TextArea = (props: React.HTMLProps<HTMLTextAreaElement>) => {
+export const TextArea = forwardRef<
+  HTMLTextAreaElement,
+  React.HTMLProps<HTMLTextAreaElement>
+>((props, ref) => {
   return (
     <textarea
       className={clsx(
@@ -14,7 +19,8 @@ export const TextArea = (props: React.HTMLProps<HTMLTextAreaElement>) => {
         "border-gray-700",
         "focus:border-blue-700"
       )}
+      ref={ref}
       {...props}
     />
   );
-};
+});
