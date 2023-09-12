@@ -1,9 +1,6 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { AnswerResponseType } from "../annotations";
-
-interface Cache<T> {
-  [url: string]: T;
-}
+import { API_ENDPOINT } from "../config";
 
 type FetchProps = {
   callBack: (data: AnswerResponseType | undefined) => void;
@@ -11,7 +8,6 @@ type FetchProps = {
 };
 
 export const UseFetch = ({ thread, callBack }: FetchProps) => {
-  const cache = useRef<Cache<AnswerResponseType>>({});
   const [data, setData] = useState<AnswerResponseType>();
   const [loading, setLoading] = useState(true);
   const [_, setError] = useState();
@@ -31,26 +27,20 @@ export const UseFetch = ({ thread, callBack }: FetchProps) => {
     headers: new Headers({ "content-type": "application/json" }),
     body: JSON.stringify(requestPayload),
   };
-  const url = "https://frozen-sea-84259-a7779bc76c91.herokuapp.com/answer";
+  const url = `${API_ENDPOINT}/answer`;
 
   async function FetchURL() {
-    if (cache.current[url]) {
-      const data = cache.current[url];
-      setData(data);
-    } else {
-      const response = await fetch(url, requestOptions);
-      if (response.ok) {
-        const data = await response.json();
-        setData(data as AnswerResponseType);
-        setLoading(false);
-        cache.current[url] = data as AnswerResponseType;
-        return data;
-      } else if (response.status === 404) {
-        setLoading(false);
-        return null;
-      }
-      return Promise.reject(response);
+    const response = await fetch(url, requestOptions);
+    if (response.ok) {
+      const data = await response.json();
+      setData(data as AnswerResponseType);
+      setLoading(false);
+      return data;
+    } else if (response.status === 404) {
+      setLoading(false);
+      return null;
     }
+    return Promise.reject(response);
   }
   useEffect(() => {
     FetchURL().catch((e) => throwError(e));

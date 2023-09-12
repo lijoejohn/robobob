@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef } from "react";
 import SimpleBar from "simplebar-react";
-import { MessageBlock, TextArea, IconButton } from "../components";
+import { TextArea, IconButton, ChatBlock } from "../components";
 import { useQuestionsState } from "../global-state/QuestionsContext";
 import { useThreadsState } from "../global-state/ThreadsContext";
-import { ThreadType, AnswerResponseType } from "../annotations";
+import { AnswerResponseType } from "../annotations";
 import "simplebar-react/dist/simplebar.min.css";
 import {
   isMathExpression,
@@ -15,30 +15,24 @@ import {
   answerThread,
 } from "../helpers";
 import UseFetch from "../hooks/useFetch";
+import { scrollStyle } from "../config";
 
 const ChatPage = ({ recentQuestion }: { recentQuestion: string }) => {
   const ref = useRef<HTMLElement>();
   const inputBoxRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+
   const [question, setQuestion] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
   const [activeQuestion, setActiveQuestion] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
 
   const { questionsState, setQuestionsState } = useQuestionsState();
   const { threadsState, setThreadsState } = useThreadsState();
-
-  const inputRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     ref?.current?.scrollTo({ top: inputBoxRef.current?.offsetTop });
     inputRef.current?.focus();
   }, []);
-
-  const style =
-    window.innerWidth > 768
-      ? { maxHeight: "calc(100vh - 40px)" }
-      : {
-          maxHeight: "calc(100vh - 200px)",
-        };
 
   useEffect(() => {
     ref?.current?.scrollTo({
@@ -57,8 +51,8 @@ const ChatPage = ({ recentQuestion }: { recentQuestion: string }) => {
 
   const submitHandler = () => {
     const recentQuestions = resetRecentQuestions(questionsState, question);
-    setQuestionsState(recentQuestions);
 
+    setQuestionsState(recentQuestions);
     if (isMathExpression(question)) {
       const questionThread = mathsQuestionThread(question);
       const answerThread = mathsAnswerThread(question);
@@ -72,16 +66,13 @@ const ChatPage = ({ recentQuestion }: { recentQuestion: string }) => {
 
   return (
     <div className="absolute mt-5 bottom-0 w-[calc(100%-5rem)] sm:w-[calc(100%-20rem)] md:w-[calc(100%-20rem)]">
-      <SimpleBar id="scroll" scrollableNodeProps={{ ref: ref }} style={style}>
-        {threadsState.map((dataSet) => {
-          return (
-            <MessageBlock
-              key={dataSet.threadKey}
-              isQuestion={dataSet.threadType === ThreadType.Question}
-              thread={dataSet.thread}
-            />
-          );
-        })}
+      <SimpleBar
+        id="scroll"
+        scrollableNodeProps={{ ref: ref }}
+        style={scrollStyle}
+      >
+        <ChatBlock threadsState={threadsState} />
+
         <div className="flex items-center p-5 mb-6" ref={inputBoxRef}>
           <TextArea
             ref={inputRef}
