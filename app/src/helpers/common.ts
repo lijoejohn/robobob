@@ -1,5 +1,5 @@
 import createDOMPurify from "dompurify";
-import { Question, ThreadType } from "../annotations/common";
+import { Question, ThreadType } from "../types/common";
 import { LABELS } from "../constants/language";
 
 export const DomPurify = (html: string): string => {
@@ -19,7 +19,8 @@ export const isMathExpression = (expression: string): boolean => {
   // Use the test method to check if the expression matches the pattern
   return pattern.test(expression);
 };
-
+// function to reset the recent questions , new question will always be on top ,
+// if the new question already exist , then it will remove from the old postion and push it on top
 export const resetRecentQuestions = (
   questionsState: Question[],
   question: string

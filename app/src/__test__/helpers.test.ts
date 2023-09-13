@@ -9,7 +9,7 @@ import {
   unknownAnswerThread,
 } from "../helpers";
 
-import { ThreadType } from "../annotations";
+import { ThreadType } from "../types";
 
 describe("Test Helpers", function () {
   it("Test isMathExpression", async () => {

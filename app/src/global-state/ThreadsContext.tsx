@@ -5,7 +5,7 @@ import React, {
   useContext,
 } from "react";
 import { useSessionStorage } from "usehooks-ts";
-import { Thread } from "../annotations";
+import { Thread } from "../types";
 
 type ThreadsStateType = Thread[];
 

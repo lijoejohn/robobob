@@ -4,7 +4,7 @@ import { axe, toHaveNoViolations } from "jest-axe";
 import { QuestionsProvider } from "../global-state/QuestionsContext";
 import { ThreadsProvider } from "../global-state/ThreadsContext";
 import ChatPage from "../pages/ChatPage";
-import { Thread, ThreadType, Question } from "../annotations";
+import { Thread, ThreadType, Question } from "../types";
 import { TEST_IDS } from "../constants/dataTestids";
 
 const mockQuestionsContext: Question[] = [

@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { AnswerResponseType } from "../annotations";
+import { AnswerResponseType } from "../types";
 import { API_ENDPOINT } from "../constants";
 
 type FetchProps = {
@@ -11,7 +11,7 @@ export const UseFetch = ({ thread, callBack }: FetchProps) => {
   const [data, setData] = useState<AnswerResponseType>();
   const [loading, setLoading] = useState(true);
   const [_, setError] = useState();
-
+  //trigger error for ErrorBoundary
   const throwError = useCallback(
     (e: TypeError) => {
       setError(() => {
@@ -37,15 +37,17 @@ export const UseFetch = ({ thread, callBack }: FetchProps) => {
       setLoading(false);
       return data;
     } else if (response.status === 404) {
+      //unknown answer case
       setLoading(false);
       return null;
     }
     return Promise.reject(response);
   }
+  //triger api when the request param changes
   useEffect(() => {
     FetchURL().catch((e) => throwError(e));
   }, [thread]);
-
+  // when api finishes fetch call the callbacl function
   useEffect(() => {
     if (!loading) {
       callBack(data);

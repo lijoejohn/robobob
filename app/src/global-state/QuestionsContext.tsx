@@ -5,7 +5,7 @@ import React, {
   useContext,
 } from "react";
 import { useSessionStorage } from "usehooks-ts";
-import { Question } from "../annotations";
+import { Question } from "../types";
 
 type QuestionsStateType = Question[];
 

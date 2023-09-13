@@ -4,7 +4,7 @@ import { act } from "react-test-renderer";
 import { axe, toHaveNoViolations } from "jest-axe";
 import { QuestionsProvider } from "../global-state/QuestionsContext";
 import { SideBar } from "../components/layout";
-import { Question } from "../annotations";
+import { Question } from "../types";
 import { TEST_IDS } from "../constants/dataTestids";
 import { LABELS } from "../constants/language";
 const mockQuestionsContext: Question[] = [
