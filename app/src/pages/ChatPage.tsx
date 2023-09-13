@@ -98,7 +98,6 @@ const ChatPage = ({ recentQuestion }: { recentQuestion: string }) => {
                 submitHandler();
               }
             }}
-            disabled={loading}
             id="textarea"
           />
           <IconButton
