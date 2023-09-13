@@ -6,6 +6,10 @@ A simple react web application.
 ## Demo
 https://robo-bob-app.web.app
 
+#### Use case - Basic math - type in the box 2+2 and hit enter or any math and hit enter (not the parenthetical expressions)
+
+#### Pre-defined question use case - type the questions that are predefined in the back end - e.g.: How are you? , Hi, I have a question, What is your name
+
 API Data set - https://frozen-sea-84259-a7779bc76c91.herokuapp.com/threads
 
 To add new questions use the following request 
