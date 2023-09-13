@@ -1,5 +1,5 @@
 # Robo bob
-Children's Mathematics Robot Web Application
+Children's Mathematics Robot (Basic maths only, not the parenthetical expressions) Web Application
 
 A simple react web application.
 
