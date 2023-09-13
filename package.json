@@ -12,7 +12,9 @@
     "start-all": "concurrently \"yarn run start:app\" \"yarn run start:api\" ",
     "test": "yarn workspace app jest src --silent --verbose -u",
     "test-coverage": "yarn workspace app jest src --silent --coverage",
-    "start": "yarn workspace api start"
+    "start": "yarn workspace api start",
+    "build-app": "yarn workspace app build",
+    "preview-app": "yarn workspace app preview"
   },
   "devDependencies": {
     "concurrently": "^8.0.1",

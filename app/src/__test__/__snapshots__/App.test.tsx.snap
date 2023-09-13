@@ -76,9 +76,11 @@ exports[`Test APP Snapshot Matches snapshot 1`] = `
                       className="flex items-center p-5 mb-6"
                     >
                       <textarea
+                        aria-label="Type a thread"
                         className="w-full h-12 mr-5 border text-sm rounded-lg p-2.5 bg-gray-700 border-gray-700 focus:border-blue-700"
                         data-testid="send-message"
                         disabled={false}
+                        id="textarea"
                         onChange={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Type a thread"

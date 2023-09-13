@@ -1,4 +1,4 @@
-export const API_ENDPOINT = `https://frozen-sea-84259-a7779bc76c91.herokuapp.com`;
+export const API_ENDPOINT = `http://localhost:8000`;
 
 export const scrollStyle =
   window.innerWidth > 768

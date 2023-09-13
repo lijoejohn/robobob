@@ -86,6 +86,7 @@ const ChatPage = ({ recentQuestion }: { recentQuestion: string }) => {
 
         <div className="flex items-center p-5 mb-6" ref={bottomDivRef}>
           <TextArea
+            aria-label="Type a thread"
             ref={textInputRef}
             value={question}
             placeholder="Type a thread"
@@ -98,6 +99,7 @@ const ChatPage = ({ recentQuestion }: { recentQuestion: string }) => {
               }
             }}
             disabled={loading}
+            id="textarea"
           />
           <IconButton
             icon="sendMessage"
