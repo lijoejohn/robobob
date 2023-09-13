@@ -8,7 +8,7 @@ https://robo-bob-app.web.app
 
 API Data set - https://frozen-sea-84259-a7779bc76c91.herokuapp.com/threads
 
-To add new questions use the following request 
+To add new question use the following request 
 
 POST - https://frozen-sea-84259-a7779bc76c91.herokuapp.com/threads
 
