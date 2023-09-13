@@ -8,7 +8,7 @@ https://robo-bob-app.web.app
 
 API Data set - https://frozen-sea-84259-a7779bc76c91.herokuapp.com/threads
 
-To add new question use the following request 
+To add new questions use the following request 
 
 POST - https://frozen-sea-84259-a7779bc76c91.herokuapp.com/threads
 
@@ -24,7 +24,7 @@ Payload as json
     "answer": "Sample answer"
 }
 
-Note : id and thread Key need to be unique
+Note: id and thread Key need to be unique
 
 ## Tech Stack
 1. Front End - React & Typescript
@@ -36,7 +36,7 @@ Note : id and thread Key need to be unique
 7. Unit testing - Jest & RTL
 
    ### Demo Deployment
-   1. Front end - Google firebase
+   1. Front end - Google Firebase
    2. Back end - Heroku
 
 ## Prerequisites
@@ -44,7 +44,7 @@ Note : id and thread Key need to be unique
 2. Yarn globally
 
 ## Run the application in your local
-Clone the code in local
+Clone the code in the local
 
 1. `yarn install-dependencies`
 2. `yarn start-all`
@@ -58,7 +58,7 @@ Clone the code in local
    `yarn build`
    `yarn preview`
 
-   The vite preview command will boot up local static web server that serves the files from dist at http://localhost:4173. It's an easy way to check if the production build looks OK in your local environment. (https://stackoverflow.com/questions/71703933/what-is-the-difference-between-vite-and-vite-preview)
+   The vite preview command will boot up the local static web server that serves the files from dist at http://localhost:4173. It's an easy way to check if the production build looks OK in your local environment. (https://stackoverflow.com/questions/71703933/what-is-the-difference-between-vite-and-vite-preview)
 
 2. To run the unit test cases
    `yarn test`
@@ -67,13 +67,26 @@ Clone the code in local
    `yarn test-coverage`
 
 ## Assumptions
-Currently back end is loaded with some pre defined questions , nonetheless, it may be expanded by including new sets of questions in the DB file.
+Currently back end is loaded with some pre-defined questions, nonetheless, it may be expanded by including new sets of questions in the DB file.
 
 ## External libraries
 1. react-test-renderer - This package provides an experimental React renderer that can be used to render React components to pure JavaScript objects, without depending on the DOM or a native mobile environment.
 2. jest-axe - for testing accessibility
 3. simplebar-react - custom scroll
-4. usehooks-ts - hook for store global context data in sessionstorage
+4. usehooks-ts - hook for storing global context data in session storage
 
-
-
+## Screenshots
+### laptop view
+![laptop view](https://raw.githubusercontent.com/lijoejohn/robobob/main/screenshots/lap.png)
+### tab view
+![tab view](https://raw.githubusercontent.com/lijoejohn/robobob/main/screenshots/tab.png)
+### mobile view
+![mobile view](https://raw.githubusercontent.com/lijoejohn/robobob/main/screenshots/mobile.png)
+### accessibility check
+![accessibility](https://raw.githubusercontent.com/lijoejohn/robobob/main/screenshots/accessibility.png)
+### lighthouse score
+![lighthouse](https://raw.githubusercontent.com/lijoejohn/robobob/main/screenshots/lighthouse.png)
+### unit test
+![lighthouse](https://raw.githubusercontent.com/lijoejohn/robobob/main/screenshots/unittest.png)
+### coverage test
+![lighthouse](https://raw.githubusercontent.com/lijoejohn/robobob/main/screenshots/coverage.png)
