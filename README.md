@@ -4,7 +4,7 @@ Children's Mathematics Robot (Basic maths only, not the parenthetical expression
 A simple react web application.
 
 ## Demo
-<a href="https://robo-bob-app.web.app" target="_blank">Demo</a>
+https://robo-bob-app.web.app
 
 #### Use case - Basic math - type in the box 2+2 and hit enter or any math and hit enter (not the parenthetical expressions)
 
