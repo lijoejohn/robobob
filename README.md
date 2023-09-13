@@ -76,12 +76,6 @@ Currently back end is loaded with some pre-defined questions, nonetheless, it ma
 4. usehooks-ts - hook for storing global context data in session storage
 
 ## Screenshots
-### laptop view
-![laptop view](https://raw.githubusercontent.com/lijoejohn/robobob/main/screenshots/lap.png)
-### tab view
-![tab view](https://raw.githubusercontent.com/lijoejohn/robobob/main/screenshots/tab.png)
-### mobile view
-![mobile view](https://raw.githubusercontent.com/lijoejohn/robobob/main/screenshots/mobile.png)
 ### accessibility check
 ![accessibility](https://raw.githubusercontent.com/lijoejohn/robobob/main/screenshots/accessibility.png)
 ### lighthouse score
@@ -90,3 +84,9 @@ Currently back end is loaded with some pre-defined questions, nonetheless, it ma
 ![lighthouse](https://raw.githubusercontent.com/lijoejohn/robobob/main/screenshots/unittest.png)
 ### coverage test
 ![lighthouse](https://raw.githubusercontent.com/lijoejohn/robobob/main/screenshots/coverage.png)
+### laptop view
+![laptop view](https://raw.githubusercontent.com/lijoejohn/robobob/main/screenshots/lap.png)
+### tab view
+![tab view](https://raw.githubusercontent.com/lijoejohn/robobob/main/screenshots/tab.png)
+### mobile view
+![mobile view](https://raw.githubusercontent.com/lijoejohn/robobob/main/screenshots/mobile.png)
