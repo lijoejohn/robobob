@@ -3,6 +3,8 @@ import { SecondaryButton } from "../Buttons";
 import { useQuestionsState } from "../../global-state/QuestionsContext";
 import { DomPurify } from "../../helpers";
 import { Header } from "./Header";
+import { LABELS } from "../../constants/language";
+import { TEST_IDS } from "../../constants/dataTestids";
 
 export const SideBar = ({
   setRecentQuestion,
@@ -24,7 +26,12 @@ export const SideBar = ({
         </div>
         {questionsState.length ? (
           <div className="flex flex-col justify-center mt-6">
-            <header className="p-0 m-0 mb-5">What you requested of me</header>
+            <header
+              className="p-0 m-0 mb-5"
+              data-testid={TEST_IDS.RECENT_QUESTIONS}
+            >
+              {LABELS.RECENT_QUESTIONS}
+            </header>
             <div className="clear-both mb-2">
               {questionsState
                 .slice(0)

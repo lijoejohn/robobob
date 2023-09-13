@@ -1,16 +1,19 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { Avatar } from "../components";
 import { DomPurify } from "../helpers";
 
 export const MessageBlock = ({
   isQuestion,
   thread,
+  threadKey,
 }: {
   isQuestion?: boolean;
   thread: string;
+  threadKey: string;
 }) => {
   return (
     <div
+      data-testid={threadKey}
       className={clsx(
         "flex",
         "p-2",

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { AnswerResponseType } from "../annotations";
-import { API_ENDPOINT } from "../config";
+import { API_ENDPOINT } from "../constants";
 
 type FetchProps = {
   callBack: (data: AnswerResponseType | undefined) => void;

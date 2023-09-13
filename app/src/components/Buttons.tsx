@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { Icon } from "../components";
 
 interface ExtraProps {
@@ -35,34 +35,6 @@ export const IconButton = (
       {...props}
     >
       <Icon icon={props.icon} />
-    </button>
-  );
-};
-
-export const Button = (
-  props: React.DetailedHTMLProps<
-    React.ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  >
-) => {
-  return (
-    <button
-      className={clsx(
-        "px-5",
-        "py-2",
-        "border",
-        "border-gray-400",
-        "border-solid",
-        "divide-transparent",
-        "rounded",
-        "hover:border-white",
-        "focus-within:outline-blue-200",
-        "focus:outline-4",
-        "focus:outline-blue-200"
-      )}
-      {...props}
-    >
-      {props.children}
     </button>
   );
 };

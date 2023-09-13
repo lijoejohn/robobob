@@ -36,11 +36,6 @@ const QuestionsProvider = ({
 
 const useQuestionsState = () => {
   const context = useContext(QuestionsStateContext);
-  if (!context) {
-    throw new Error(
-      "useQuestionsState must be used within a QuestionsStateContext"
-    );
-  }
   return context;
 };
 

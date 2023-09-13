@@ -6,6 +6,7 @@ export const ChatBlock = ({ threadsState }: { threadsState: Thread[] }) => {
     return (
       <MessageBlock
         key={dataSet.threadKey}
+        threadKey={dataSet.threadKey}
         isQuestion={dataSet.threadType === ThreadType.Question}
         thread={dataSet.thread}
       />

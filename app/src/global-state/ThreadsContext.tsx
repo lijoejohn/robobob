@@ -34,11 +34,6 @@ const ThreadsProvider = ({
 
 const useThreadsState = () => {
   const context = useContext(ThreadsStateContext);
-  if (!context) {
-    throw new Error(
-      "useThreadsState must be used within a ThreadsStateContext"
-    );
-  }
   return context;
 };
 

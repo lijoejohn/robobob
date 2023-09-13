@@ -6,13 +6,13 @@
   ],
   "private": true,
   "scripts": {
-    "test-automation": "yarn workspace app test-automation",
     "install-dependencies": "yarn install",
     "start:app": "yarn workspace app dev",
     "start:api": "yarn workspace api start",
-    "start": "yarn workspace api start",
     "start-all": "concurrently \"yarn run start:app\" \"yarn run start:api\" ",
-    "test": "yarn workspace app test"
+    "test": "yarn workspace app jest src --silent --verbose -u",
+    "test-coverage": "yarn workspace app jest src --silent --coverage",
+    "start": "yarn workspace api start"
   },
   "devDependencies": {
     "concurrently": "^8.0.1",

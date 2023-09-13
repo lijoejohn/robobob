@@ -1,5 +1,6 @@
 import createDOMPurify from "dompurify";
 import { Question, ThreadType } from "../annotations/common";
+import { LABELS } from "../constants/language";
 
 export const DomPurify = (html: string): string => {
   const DOMPurify = createDOMPurify(window);
@@ -35,13 +36,13 @@ export const resetRecentQuestions = (
 
 export const mathsQuestionThread = (question: string) => {
   return {
-    thread: `Basic mathematical expressions : ${question}`,
+    thread: `${LABELS.BASIC_MATH_EXPRESSIONS} : ${question}`,
     threadKey: generateKey(`${question}-${Date.now()}`),
     threadType: ThreadType.Question,
   };
 };
 export const mathsAnswerThread = (question: string) => {
-  const thread = `Your response to the basic mathematical expressions :  ${eval(
+  const thread = `${LABELS.BASIC_MATH_EXPRESSION_ANSWER} :  ${eval(
     question.replace("--", "- -").replace("++", "+ +")
   )}`;
   return {
@@ -68,11 +69,9 @@ export const answerThread = (answer: string) => {
 };
 
 export const unknownAnswerThread = () => {
-  const thread =
-    "I'm sorry, but I have no knowledge regarding this query. Would you kindly reword the questions?";
   return {
-    thread,
-    threadKey: generateKey(`${thread}-${Date.now()}`),
+    thread: LABELS.ANSWER_NOT_FOUD,
+    threadKey: generateKey(`${LABELS.ANSWER_NOT_FOUD}-${Date.now()}`),
     threadType: ThreadType.Answer,
   };
 };

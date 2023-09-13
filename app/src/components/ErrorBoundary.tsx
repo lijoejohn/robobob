@@ -1,5 +1,5 @@
 import { Component, ReactNode } from "react";
-
+import { LABELS } from "../constants/language";
 interface Props {
   children?: ReactNode;
 }
@@ -23,7 +23,7 @@ export class ErrorBoundary extends Component<Props, State> {
     if (hasError) {
       return (
         <div className="error-heading">
-          <h3 className="">Something went wrong, Please reload the page</h3>
+          <h3 className="">{LABELS.ERROR_TEXT}</h3>
         </div>
       );
     }

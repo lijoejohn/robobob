@@ -1,4 +1,5 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
+import { LABELS } from "../constants/language";
 export const Avatar = ({ isQuestion }: { isQuestion?: boolean }) => {
   return (
     <div
@@ -18,7 +19,7 @@ export const Avatar = ({ isQuestion }: { isQuestion?: boolean }) => {
         !isQuestion && "text-white"
       )}
     >
-      {isQuestion ? `You` : `Bob`}
+      {isQuestion ? LABELS.YOU : LABELS.BOB}
     </div>
   );
 };

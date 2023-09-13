@@ -15,7 +15,8 @@ import {
   answerThread,
 } from "../helpers";
 import UseFetch from "../hooks/useFetch";
-import { scrollStyle } from "../config";
+import { scrollStyle } from "../constants";
+import { TEST_IDS } from "../constants/dataTestids";
 
 const ChatPage = ({ recentQuestion }: { recentQuestion: string }) => {
   const ref = useRef<HTMLElement>();
@@ -78,7 +79,7 @@ const ChatPage = ({ recentQuestion }: { recentQuestion: string }) => {
             ref={inputRef}
             value={question}
             placeholder="Type a thread"
-            id="first_name"
+            data-testid="send-message"
             onChange={typeHandler}
             onKeyDown={(e) => {
               if (e.key === "Enter" && e.shiftKey == false) {
@@ -92,6 +93,7 @@ const ChatPage = ({ recentQuestion }: { recentQuestion: string }) => {
             icon="sendMessage"
             aria-label="Send Message"
             onClick={submitHandler}
+            data-testid={TEST_IDS.SEND_BUTTON}
             disabled={question === "" || loading}
           />
         </div>
